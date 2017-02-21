@@ -161,40 +161,34 @@
       </aside>
 
       <!-- Content Wrapper. Contains page content -->
-      <div class="content-wrapper">
-        <!-- Content Header (Page header) -->
-        <section class="content-header">
-          <h1 class="lead" style="font-size:45px">
-          Tambah Pegawai 
-          </h1 style="font-size:45px">
-          <hr>
-          <ol class="breadcrumb">
-            <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-            <li class="active">Dashboard</li>
-          </ol>
-        </section>
+       <div class="content-wrapper">
+    <!-- Content Header (Page header) -->    
 
-        <!-- Main content -->
+    <!-- Main content -->
+    <section class="content">
 
-        <section class="content">
-          <div class="col-md-12">
+      <div class="row">
+        <div class="col-md-12">
+
+          <!-- Profile Image -->          
+          <!-- /.box -->
+
+          <!-- About Me Box -->
+          
+        <!-- /.col -->
+        <div class="col-md-12">
           <div class="nav-tabs-custom">
             <ul class="nav nav-tabs">
               <li class="active"><a href="#activity" data-toggle="tab">Kepegawaian</a></li>
               <li><a href="#timeline" data-toggle="tab">Keluarga</a></li>
               <li><a href="#settings" data-toggle="tab">Pendidikan</a></li>
             </ul>
-          <div class="row">
-            <div class="col-xs-12">
-              <div class="box">
-                <div class="box-header" style="background:#0072C6">
-                  <h3 style="color:white;" class="box-title">Detail Pegawai</h3>
-                </div><!-- /.box-header -->
-                <div class="panel">
-          </div>
-        </div>
-  <div class="content"> 
-    <table style="width:55%">
+            <div class="tab-content">
+              <div class="active tab-pane" id="activity">
+                <!-- Post -->
+                <div class="content"> 
+    <table>
+      <th>Detail Pegawai</th>
       <tr>
         <td>NIK</td>
         <td>
@@ -355,7 +349,7 @@
         </td>
       </tr>
       <tr>
-        <td>Telephone Yang Bisa Dihubungi</td>
+        <td>Telephone</td>
         <td>
           <div class="input-contol text full-size">
           <input type="text" style="width:100%" name="tlp">
@@ -373,16 +367,245 @@
       </tr>
     
   </div>
-</div><!-- /.box-body -->
-              </div><!-- /.box -->
-            </div><!-- /.col -->
-          </div><!-- /.row -->
-        </section>
-      </aside><!-- /.control-sidebar -->
-      <!-- Add the sidebar's background. This div must be placed
-           immediately after the control sidebar -->
-      <div class="control-sidebar-bg"></div>
-    </div><!-- ./wrapper -->
+                <!-- /.post -->
+              </div>
+              <!-- /.tab-pane -->
+              <div class="tab-pane" id="timeline">
+                <!-- The timeline -->
+                
+                  <!-- timeline time label -->
+                   <div class="content"> 
+    <table>
+      <tr>
+        <td>Nama</td>
+        <td>
+          <div class="input-control text full-size">
+            <input style="width:100%;" type="text" name="nama">
+          </div>
+          <br>
+        </td>
+      </tr>
+       <tr>
+      <td>Tanggal Lahir</td>
+      <td>
+      <input class="form-control" data-inputmask="'alias': 'dd/mm/yyyy'" data-mask="" type="text" name="tanggal_lahir">
+      <br>         
+      </td>
+      </tr>
+       <tr>
+        <td>Level</td>
+        <td>
+          <div class="input-control select">
+          <select style="width:100%" name="level">
+            <option>-Pilih Level-</option>
+            
+          </select>
+          </div>
+          <br>
+        </td>
+      <tr>
+        <td>Lokasi Kerja</td>
+        <td>
+          <div class="input-control select">
+          <select style="width:100%" name="lokasi_kerja">
+            <option>-Pilih Lokasi Kerja-</option> 
+            
+          </select>
+          </div>
+          <br>
+        </td>
+      </tr>
+      <tr>
+        <td>Unit Kerja</td>
+        <td>
+          <div class="input-control select">
+          <select style="width:100%" name="unit_kerja">
+            <option>Pilih Unit Kerja</option>
+            
+          </select>
+          </div>
+          <br>
+        </td>
+      </tr>
+      <tr>
+        <tr>
+        <td>Jabatan</td>
+        <td>
+          <div class="input-control select">
+          <select style="width:100%" name="jabatan">
+            <option>Pilih jabatan</option>
+                
+          </select>
+          </div>
+          <br>
+        </td>
+      </tr>
+      <tr>
+        <td>Status Aktif</td>
+        <td>
+          <div class="input-contol text full-size">
+          <select style="width:40%;" name="status_aktif">
+            <option>Tidak Aktif</option>
+            <option>Aktif</option>
+          </select>
+          </div>
+          <br>
+        </td>
+      </tr>
+      <tr>
+        <td>Status Kawin</td>
+        <td>
+          <div class="input-contol text full-size">
+          <select style="width:40% ;" name="status_kawin">
+            <option>Belum Kawin</option>
+            <option>Sudah Kawin</option>
+          </select>
+          </div>
+          <br>
+        </td>
+      </tr>
+      <tr>
+        <td>Nomor SK</td>
+        <td>
+          <div class="input-control text full-size">
+            <input style="width:100%;" type="text" name="nomor_sk">
+          </div>
+          <br>
+        </td>
+      </tr>
+      <tr>
+      <td>Tanggal Sk</td>
+      <td>
+      <input class="form-control" data-inputmask="'alias': 'dd/mm/yyyy'" data-mask="" type="text" name="tanggal_sk">
+      <br>          
+      </td>
+      </tr>
+      </tr>
+      <tr>
+      <td>
+      <h3>Alamat Pegawai</h1>
+      <br>
+      </td>
+     </tr>
+     <tr>
+        <td>Alamat</td>
+        <td>
+          <div class="input-control text full-size">
+            <textarea style="width:100%" name="alamat"></textarea>
+          </div>
+          <br>
+        </td>
+      </tr>
+      <tr>
+      <tr>
+        <td>RT/RW</td>
+        <td>
+          <div class="input-control text full-size">
+            <input style="width:50%;" type="text" name="rt_rw">
+          </div>
+          <br>
+        </td>
+      </tr>
+      <tr>
+        <td>Kode Pos</td>
+        <td>
+          <div class="input-contol text full-size">
+          <input type="text" style="width:100%" name="kode_pos">
+          </div>
+          <br>
+        </td>
+      </tr>
+      <tr>
+        <td>Telephone</td>
+        <td>
+          <div class="input-contol text full-size">
+          <input type="text" style="width:100%" name="tlp">
+          </div>
+          <br>
+        </td>
+      </tr>
+      </table>
+      <td>
+      <div><td><a href="#"><button style="border:none;background:#82BA00;height:25px;width:100px;color:white" type="submit">SIMPAN</button></a></td></form>
+      <td><a href="/"><button style=";border:none;background:#82BA00;height:25px;width:100px;color:white" type="submit">KEMBALI</button></a></td>
+      </div>
+      </td>
+      </td>
+      </tr>
+    
+  </div>
+                  <!-- END timeline item -->
+                 
+                
+              </div>
+              <!-- /.tab-pane -->
+
+              <div class="tab-pane" id="settings">
+                <form class="form-horizontal">
+                  <div class="form-group">
+                    <label for="inputName" class="col-sm-2 control-label">Name</label>
+
+                    <div class="col-sm-10">
+                      <input type="email" class="form-control" id="inputName" placeholder="Name">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="inputEmail" class="col-sm-2 control-label">Email</label>
+
+                    <div class="col-sm-10">
+                      <input type="email" class="form-control" id="inputEmail" placeholder="Email">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="inputName" class="col-sm-2 control-label">Name</label>
+
+                    <div class="col-sm-10">
+                      <input type="text" class="form-control" id="inputName" placeholder="Name">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="inputExperience" class="col-sm-2 control-label">Experience</label>
+
+                    <div class="col-sm-10">
+                      <textarea class="form-control" id="inputExperience" placeholder="Experience"></textarea>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="inputSkills" class="col-sm-2 control-label">Skills</label>
+
+                    <div class="col-sm-10">
+                      <input type="text" class="form-control" id="inputSkills" placeholder="Skills">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-10">
+                      <div class="checkbox">
+                        <label>
+                          <input type="checkbox"> I agree to the <a href="#">terms and conditions</a>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-10">
+                      <button type="submit" class="btn btn-danger">Submit</button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+              <!-- /.tab-pane -->
+            </div>
+            <!-- /.tab-content -->
+          </div>
+          <!-- /.nav-tabs-custom -->
+        </div>
+        <!-- /.col -->
+      </div>
+      <!-- /.row -->
+
+    </section>
+    <!-- /.content -->
+  </div><!-- ./wrapper -->
 
     <!-- jQuery 2.1.4 -->
     <script src="plugins/jQuery/jQuery-2.1.4.min.js"></script>
