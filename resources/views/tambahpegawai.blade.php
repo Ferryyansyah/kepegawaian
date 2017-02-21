@@ -188,7 +188,7 @@
                 <!-- Post -->
                 <div class="content"> 
     <table>
-      <th>Detail Pegawai</th>
+       <h3>Detail Pegawai</h1>
       <tr>
         <td>NIK</td>
         <td>
@@ -376,6 +376,7 @@
                   <!-- timeline time label -->
                    <div class="content"> 
     <table>
+       <h3>Detail Pegawai</h1>
       <tr>
         <td>Nama</td>
         <td>
