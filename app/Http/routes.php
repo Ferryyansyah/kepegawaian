@@ -31,6 +31,7 @@ Route::get('updatepp/edit/{id}','CrudController@editpp');
 
 Route::get('/dash-board',['as'=>'dash-board','uses'=>"DashBoardController@index"]);
 
+Route::get('keluarga',['as'=>'home','uses'=>'WelcomeController@keluargalist']);
 Route::get('profilpegawai',['as'=>'home','uses'=>'WelcomeController@profil']);
 Route::get('profilpegawai/detail/{id}',['as'=>'home','uses'=>'WelcomeController@profildetail']);
 Route::get('/mutasi',['as'=>'mutasi','uses'=>"WelcomeController@mutasi"]);
@@ -59,6 +60,7 @@ Route::post('inputlok','CrudController@show');
 Route::post('inputuni','CrudController@store');
 Route::post('inputlev','CrudController@stores');
 Route::post('inputpro','CrudController@storess');
+Route::post('input/pegawai/keluarga','CrudController@inputpegawaikeluarga');
 
 Route::post('edprof/{id}','CrudController@updateprof');
 Route::post('edjab/{id}','CrudController@updatejab');

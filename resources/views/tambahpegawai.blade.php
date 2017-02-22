@@ -7,28 +7,28 @@
     <!-- Tell the browser to be responsive to screen width -->
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <!-- Bootstrap 3.3.5 -->
-    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{url('bootstrap/css/bootstrap.min.css')}}">
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="{{url('https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css')}}">
     <!-- Ionicons -->
-    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" href="{{url('https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css')}}">
     <!-- Theme style -->
-    <link rel="stylesheet" href="dist/css/AdminLTE.min.css">
+    <link rel="stylesheet" href="{{url('dist/css/AdminLTE.min.css')}}">
     <!-- AdminLTE Skins. Choose a skin from the css/skins
          folder instead of downloading all of them to reduce the load. -->
-    <link rel="stylesheet" href="dist/css/skins/_all-skins.min.css">
+    <link rel="stylesheet" href="{{url('dist/css/skins/_all-skins.min.css')}}">
     <!-- iCheck -->
-    <link rel="stylesheet" href="plugins/iCheck/flat/blue.css">
+    <link rel="stylesheet" href="{{url('plugins/iCheck/flat/blue.css')}}">
     <!-- Morris chart -->
-    <link rel="stylesheet" href="plugins/morris/morris.css">
+    <link rel="stylesheet" href="{{url('plugins/morris/morris.css')}}">
     <!-- jvectormap -->
-    <link rel="stylesheet" href="plugins/jvectormap/jquery-jvectormap-1.2.2.css">
+    <link rel="stylesheet" href="{{url('plugins/jvectormap/jquery-jvectormap-1.2.2.css')}}">
     <!-- Date Picker -->
-    <link rel="stylesheet" href="plugins/datepicker/datepicker3.css">
+    <link rel="stylesheet" href="{{url('plugins/datepicker/datepicker3.css')}}">
     <!-- Daterange picker -->
-    <link rel="stylesheet" href="plugins/daterangepicker/daterangepicker-bs3.css">
+    <link rel="stylesheet" href="{{url('plugins/daterangepicker/daterangepicker-bs3.css')}}">
     <!-- bootstrap wysihtml5 - text editor -->
-    <link rel="stylesheet" href="plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css">
+    <link rel="stylesheet" href="{{url('plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css')}}">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -179,9 +179,9 @@
         <div class="col-md-12">
           <div class="nav-tabs-custom">
             <ul class="nav nav-tabs">
-              <li class="active"><a href="#activity" data-toggle="tab">Kepegawaian</a></li>
-              <li><a href="#timeline" data-toggle="tab">Keluarga</a></li>
-              <li><a href="#settings" data-toggle="tab">Pendidikan</a></li>
+              <li class="active"><a href="#activity" data-toggle="tab">Kepegawaian</a></li><!-- 
+              <li><a href="#timeline" data-toggle="tab">Keluarga</a></li> -->
+              <!-- <li><a href="#settings" data-toggle="tab">Pendidikan</a></li> -->
             </ul>
             <div class="tab-content">
               <div class="active tab-pane" id="activity">
@@ -375,156 +375,69 @@
                 
                   <!-- timeline time label -->
                    <div class="content"> 
+                   <form action="input/pegawai/keluarga" method="post">
+        <input type="hidden" name="_token" value="{{ csrf_token() }}">
+        <div class="input-control text full-size">   
     <table>
-       <h3>Detail Pegawai</h1>
+    <thead>
+       <h3>Pasangan Pegawai</h3>
       <tr>
         <td>Nama</td>
         <td>
           <div class="input-control text full-size">
-            <input style="width:100%;" type="text" name="nama">
+            <input style="width:100%;" type="text" name="nama_pasangan" id="nama_pasangan">
           </div>
           <br>
         </td>
       </tr>
        <tr>
-      <td>Tanggal Lahir</td>
+      <td>Tanggal Lahir PASANGAN</td>
       <td>
-      <input class="form-control" data-inputmask="'alias': 'dd/mm/yyyy'" data-mask="" type="text" name="tanggal_lahir">
+      <input class="form-control" data-inputmask="'alias': 'dd/mm/yyyy'" data-mask="" type="text" name="tgl_lahir_pasangan" id="tgl_lahir_pasangan">
       <br>         
       </td>
       </tr>
+    </thead>
+    <tbody>
+    <td><h3>Ayah Pegawai</h3></td>
        <tr>
-        <td>Level</td>
-        <td>
-          <div class="input-control select">
-          <select style="width:100%" name="level">
-            <option>-Pilih Level-</option>
-            
-          </select>
-          </div>
-          <br>
-        </td>
-      <tr>
-        <td>Lokasi Kerja</td>
-        <td>
-          <div class="input-control select">
-          <select style="width:100%" name="lokasi_kerja">
-            <option>-Pilih Lokasi Kerja-</option> 
-            
-          </select>
-          </div>
-          <br>
-        </td>
-      </tr>
-      <tr>
-        <td>Unit Kerja</td>
-        <td>
-          <div class="input-control select">
-          <select style="width:100%" name="unit_kerja">
-            <option>Pilih Unit Kerja</option>
-            
-          </select>
-          </div>
-          <br>
-        </td>
-      </tr>
-      <tr>
-        <tr>
-        <td>Jabatan</td>
-        <td>
-          <div class="input-control select">
-          <select style="width:100%" name="jabatan">
-            <option>Pilih jabatan</option>
-                
-          </select>
-          </div>
-          <br>
-        </td>
-      </tr>
-      <tr>
-        <td>Status Aktif</td>
-        <td>
-          <div class="input-contol text full-size">
-          <select style="width:40%;" name="status_aktif">
-            <option>Tidak Aktif</option>
-            <option>Aktif</option>
-          </select>
-          </div>
-          <br>
-        </td>
-      </tr>
-      <tr>
-        <td>Status Kawin</td>
-        <td>
-          <div class="input-contol text full-size">
-          <select style="width:40% ;" name="status_kawin">
-            <option>Belum Kawin</option>
-            <option>Sudah Kawin</option>
-          </select>
-          </div>
-          <br>
-        </td>
-      </tr>
-      <tr>
-        <td>Nomor SK</td>
+        <td>Nama</td>
         <td>
           <div class="input-control text full-size">
-            <input style="width:100%;" type="text" name="nomor_sk">
+            <input style="width:100%;" type="text" name="nama_ayah" id="nama_ayah">
           </div>
           <br>
-        </td>
-      </tr>
+        </td> 
       <tr>
-      <td>Tanggal Sk</td>
+      <td>Tanggal Lahir AYAH</td>
       <td>
-      <input class="form-control" data-inputmask="'alias': 'dd/mm/yyyy'" data-mask="" type="text" name="tanggal_sk">
-      <br>          
+      <input class="form-control" data-inputmask="'alias': 'dd/mm/yyyy'" data-mask="" type="text" name="tgl_lahir_ayah" id="tgl_lahir_ayah">
+      <br>         
       </td>
       </tr>
-      </tr>
+    </thead>
+    <tbody>
+     <td><h3>Ibu Pegawai</h3></td>
+       <tr>
+        <td>Nama</td>
+        <td>
+          <div class="input-control text full-size">
+            <input style="width:100%;" type="text" name="nama_ibu" id="nama_ibu">
+          </div>
+          <br>
+        </td> 
+      <tr>
+      <td>Tanggal Lahir IBU</td>
+      <td>
+      <input class="form-control" data-inputmask="'alias': 'dd/mm/yyyy'" data-mask="" type="text" name="tgl_lahir_ibu" id="tgl_lahir_ibu">
+      <br>         
+      </td>
+      </tr> 
       <tr>
       <td>
-      <h3>Alamat Pegawai</h1>
       <br>
       </td>
      </tr>
-     <tr>
-        <td>Alamat</td>
-        <td>
-          <div class="input-control text full-size">
-            <textarea style="width:100%" name="alamat"></textarea>
-          </div>
-          <br>
-        </td>
-      </tr>
-      <tr>
-      <tr>
-        <td>RT/RW</td>
-        <td>
-          <div class="input-control text full-size">
-            <input style="width:50%;" type="text" name="rt_rw">
-          </div>
-          <br>
-        </td>
-      </tr>
-      <tr>
-        <td>Kode Pos</td>
-        <td>
-          <div class="input-contol text full-size">
-          <input type="text" style="width:100%" name="kode_pos">
-          </div>
-          <br>
-        </td>
-      </tr>
-      <tr>
-        <td>Telephone</td>
-        <td>
-          <div class="input-contol text full-size">
-          <input type="text" style="width:100%" name="tlp">
-          </div>
-          <br>
-        </td>
-      </tr>
       </table>
       <td>
       <div><td><a href="#"><button style="border:none;background:#82BA00;height:25px;width:100px;color:white" type="submit">SIMPAN</button></a></td></form>
@@ -533,6 +446,7 @@
       </td>
       </td>
       </tr>
+      </tbody>
     
   </div>
                   <!-- END timeline item -->
@@ -541,7 +455,7 @@
               </div>
               <!-- /.tab-pane -->
 
-              <div class="tab-pane" id="settings">
+             <!--  <div class="tab-pane" id="settings">
                 <form class="form-horizontal">
                   <div class="form-group">
                     <label for="inputName" class="col-sm-2 control-label">Name</label>
@@ -592,7 +506,7 @@
                       <button type="submit" class="btn btn-danger">Submit</button>
                     </div>
                   </div>
-                </form>
+                </form> -->
               </div>
               <!-- /.tab-pane -->
             </div>

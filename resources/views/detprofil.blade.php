@@ -7,28 +7,28 @@
     <!-- Tell the browser to be responsive to screen width -->
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <!-- Bootstrap 3.3.5 -->
-    <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{url('/bootstrap/css/bootstrap.min.css')}}">
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="{{url('https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css')}}">
     <!-- Ionicons -->
-    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" href="{{url('https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css')}}">
     <!-- Theme style -->
-    <link rel="stylesheet" href="/dist/css/AdminLTE.min.css">
+    <link rel="stylesheet" href="{{url('/dist/css/AdminLTE.min.css')}}">
     <!-- AdminLTE Skins. Choose a skin from the css/skins
          folder instead of downloading all of them to reduce the load. -->
-    <link rel="stylesheet" href="/dist/css/skins/_all-skins.min.css">
+    <link rel="stylesheet" href="{{url('/dist/css/skins/_all-skins.min.css')}}">
     <!-- iCheck -->
-    <link rel="stylesheet" href="/plugins/iCheck/flat/blue.css">
+    <link rel="stylesheet" href="{{url('/plugins/iCheck/flat/blue.css')}}">
     <!-- Morris chart -->
-    <link rel="stylesheet" href="/plugins/morris/morris.css">
+    <link rel="stylesheet" href="{{url('/plugins/morris/morris.css')}}">
     <!-- jvectormap -->
-    <link rel="stylesheet" href="/plugins/jvectormap/jquery-jvectormap-1.2.2.css">
+    <link rel="stylesheet" href="{{url('/plugins/jvectormap/jquery-jvectormap-1.2.2.css')}}">
     <!-- Date Picker -->
-    <link rel="stylesheet" href="/plugins/datepicker/datepicker3.css">
+    <link rel="stylesheet" href="{{url('/plugins/datepicker/datepicker3.css')}}">
     <!-- Daterange picker -->
-    <link rel="stylesheet" href="/plugins/daterangepicker/daterangepicker-bs3.css">
+    <link rel="stylesheet" href="{{url('/plugins/daterangepicker/daterangepicker-bs3.css')}}">
     <!-- bootstrap wysihtml5 - text editor -->
-    <link rel="stylesheet" href="/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css">
+    <link rel="stylesheet" href="{{url('/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css')}}">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -185,65 +185,70 @@
                   <table class="table table-bordered table-hover table-striped">
                                 <tr>
                                 @foreach($profilpegawai as $data)
-                                    <td>NIK Pegawai</td><td>:</td>
+                                    <td>NIK Pegawai</td>
                                     <td>{{ $data->nik }}</td>
                                 </tr>
                                 <tr>
-                                    <td>Nama Pegawai</td><td>:</td>
+                                    <td>Nama Pegawai</td>
                                     <td>{{ $data->nama }}</td>
                                 </tr>
                                 <tr>
-                                    <td>Tanggal Lahir</td><td>:</td>
+                                    <td>Tanggal Lahir</td>
                                     <td>{{ $data->tanggal_lahir }}</td>
                                 </tr>
                                 <tr>
-                                    <td>Level</td><td>:</td>
+                                    <td>Level</td>
                                     <td>{{ $data->level }}</td>
                                 </tr>
                                 <tr>
-                                    <td>Lokasi Kerja</td><td>:</td>
+                                    <td>Lokasi Kerja</td>
                                     <td>{{ $data->lokasi_kerja }}</td>
                                 </tr>
                                 <tr>
-                                    <td>Unit Kerja</td><td>:</td>
+                                    <td>Unit Kerja</td>
                                     <td>{{ $data->unit_kerja }}</td>
                                 </tr>
                                 <tr>
-                                    <td>Jabatan</td><td>:</td>
+                                    <td>Jabatan</td>
                                     <td>{{ $data->jabatan }}</td>
                                 </tr>
                                 <tr>
-                                    <td>Status Aktif</td><td>:</td>
+                                    <td>Status Aktif</td>
                                     <td>{{ $data->status_aktif }}</td>
                                 </tr>
                                 <tr>
-                                    <td>Status Kawin</td><td>:</td>
+                                    <td>Status Kawin</td>
                                     <td>{{ $data->status_kawin }}</td>
                                 </tr>
                                 <tr>
-                                    <td>Nomor Sk</td><td>:</td>
+                                    <td>Nomor Sk</td>
                                     <td>{{ $data->nomor_sk }}</td>
                                 </tr>
                                 <tr>
-                                    <td>Tanggal Sk</td><td>:</td>
+                                    <td>Tanggal Sk</td>
                                     <td>{{ $data->tanggal_sk }}</td>
                                 </tr>
                                 <tr>
-                                    <td>Alamat</td><td>:</td>
+                                    <td>Alamat</td>
                                     <td>{{ $data->alamat }}</td>
                                 </tr>
                                 <tr>
-                                    <td>Rt/Rw</td><td>:</td>
+                                    <td>Rt/Rw</td>
                                     <td>{{ $data->rt_rw }}</td>
                                 </tr>
                                 <tr>
-                                    <td>Kode Pos</td><td>:</td>
+                                    <td>Kode Pos</td>
                                     <td>{{ $data->kode_pos }}</td>
                                 </tr>
                                 <tr>
-                                    <td>Nomor Telephone</td><td>:</td>
+                                    <td>Nomor Telephone</td>
                                     <td>{{ $data->tlp }}</td>
-                                </tr>                                
+                                </tr> 
+                                 <tr>
+                                    <td>Nama Pasangan</td>
+                                    <td>{{ $data->nama_pasangan }}</td>
+                                </tr> 
+
                                 @endforeach
                             </table>
                             <br>

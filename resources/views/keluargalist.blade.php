@@ -5,30 +5,30 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>AdminLTE 2 | Dashboard</title>
     <!-- Tell the browser to be responsive to screen width -->
-    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport')}}">
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <!-- Bootstrap 3.3.5 -->
-    <link rel="stylesheet" href="{{url('bootstrap/css/bootstrap.min.css')}}">
+    <link rel="stylesheet" href="{{url('/bootstrap/css/bootstrap.min.css')}}">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="{{url('https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css')}}">
     <!-- Ionicons -->
     <link rel="stylesheet" href="{{url('https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css')}}">
     <!-- Theme style -->
-    <link rel="stylesheet" href="{{url('dist/css/AdminLTE.min.css')}}">
+    <link rel="stylesheet" href="{{url('/dist/css/AdminLTE.min.css')}}">
     <!-- AdminLTE Skins. Choose a skin from the css/skins
          folder instead of downloading all of them to reduce the load. -->
-    <link rel="stylesheet" href="{{url('dist/css/skins/_all-skins.min.css')}}">
+    <link rel="stylesheet" href="{{url('/dist/css/skins/_all-skins.min.css')}}">
     <!-- iCheck -->
-    <link rel="stylesheet" href="{{url('plugins/iCheck/flat/blue.css')}}">
+    <link rel="stylesheet" href="{{url('/plugins/iCheck/flat/blue.css')}}">
     <!-- Morris chart -->
-    <link rel="stylesheet" href="{{url('plugins/morris/morris.css')}}">
+    <link rel="stylesheet" href="{{url('/plugins/morris/morris.css')}}">
     <!-- jvectormap -->
-    <link rel="stylesheet" href="{{url('plugins/jvectormap/jquery-jvectormap-1.2.2.css')}}">
+    <link rel="stylesheet" href="{{url('/plugins/jvectormap/jquery-jvectormap-1.2.2.css')}}">
     <!-- Date Picker -->
-    <link rel="stylesheet" href="{{url('plugins/datepicker/datepicker3.css')}}">
+    <link rel="stylesheet" href="{{url('/plugins/datepicker/datepicker3.css')}}">
     <!-- Daterange picker -->
-    <link rel="stylesheet" href="{{url('plugins/daterangepicker/daterangepicker-bs3.css')}}">
+    <link rel="stylesheet" href="{{url('/plugins/daterangepicker/daterangepicker-bs3.css')}}">
     <!-- bootstrap wysihtml5 - text editor -->
-    <link rel('stylesheet" href="{{url('plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css')}}">
+    <link rel="stylesheet" href="{{url('/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css')}}">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -38,17 +38,17 @@
     <![endif]-->
     <style type="text/css">
     hr {
-    -moz-border-bottom-colors: none;
-    -moz-border-image: none;
-    -moz-border-left-colors: none;
-    -moz-border-right-colors: none;
-    -moz-border-top-colors: none;
-    border-color: rgba(0,0,0,0.1) -moz-use-text-color rgba(0,0,0,0.1);
-    border-style: solid none;
-    border-width: 1px 0;
-    margin: 18px 0;
-  }
-  </style>
+	  -moz-border-bottom-colors: none;
+	  -moz-border-image: none;
+	  -moz-border-left-colors: none;
+	  -moz-border-right-colors: none;
+	  -moz-border-top-colors: none;
+	  border-color: rgba(0,0,0,0.1) -moz-use-text-color rgba(0,0,0,0.1);
+	  border-style: solid none;
+	  border-width: 1px 0;
+	  margin: 18px 0;
+	}
+	</style>
   </head>
   <body class="hold-transition skin-blue sidebar-mini">
     <div class="wrapper">
@@ -146,7 +146,7 @@
                 <i class="fa fa-th"></i> <span>Lokasi Kerja</span>
               </a>
             </li>
-             <li class="active">
+             <li>
               <a href="/unitkerja">
                 <i class="fa fa-th"></i> <span>Unit Kerja</span>
               </a>
@@ -164,12 +164,12 @@
         <!-- Content Header (Page header) -->
         <section class="content-header">
           <h1 class="lead" style="font-size:45px">
-          Master skkpd / Unit Devisi
+          Table Pegawai 
           </h1 style="font-size:45px">
           <hr>
           <ol class="breadcrumb">
             <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-            <li class="active">Unit Kerja</li>
+            <li class="active">Profil Pegawai</li>
           </ol>
         </section>
 
@@ -179,57 +179,55 @@
             <div class="col-xs-12">
               <div class="box">
                 <div class="box-header" style="background:#0072C6">
-                  <h3 style="color:white;" class="box-title">List Unit Kerja</h3>
-                  <a href="/tambahunitkerja"><button style="float:right;border:none;background:#82BA00;height:30px;width:150px;color:white" type="submit">Tambah Data</button></a>
+                  <h3 style="color:white;" class="box-title">List Pegawai</h3>
+                  <a href="/tambahpegawai"><button style="float:right;border:none;background:#82BA00;height:30px;width:150px;color:white" type="submit">Tambah Data</button></a>
                 </div><!-- /.box-header -->
                 <div class="box-body" style="background:#fff">
                   <table id="example2" class="table table-bordered table-hover" style="background:#ECF0F5">
                     <thead>
                       <tr>
-                        <th>ID DIVISI</th>
-                        <th>Nama</th>
-                        <th>Aksi</th>
+                        <th>Nama Pasangan</th>
+                        <th>Tgl Lahir Pasangan</th>
+                        <th>Nama Ayah</th>
+                        <th>Tgl Lahir Ayah</th>
+                        <th>Nama Ibu</th>
+                        <th>Tgl Lahir Ibu</th>
+                        <!-- <th>Actions</th> -->
                       </tr>
                     </thead>
-                   <tbody>
-                   @foreach($unitkerja as $unitkerja)
+                    <tbody>
+                    @foreach($keluargas as $keluargas)
                       <tr>
-                        <td>{{ $unitkerja->kode_divisi }}</td>
-                        <td>{{ $unitkerja->nama_divisi }}</td>                    
-                        <td><div class="btn-group">
-                          <a class="btn btn-default" href="{{ url('edunit/'.$unitkerja->id) }}">
+                        <td>{{ $keluargas->nama_pasangan }}</td>
+                        <td>{{ $keluargas->tgl_lahir_pasangan }}</td>
+                        <td>{{ $keluargas->nama_ayah }}</td>
+                        <td>{{ $keluargas->tgl_lahir_ayah}}</td>
+                        <td>{{ $keluargas->nama_ibu }}</td>
+                        <td>{{ $keluargas->tgl_lahir_ibu}}</td>                   
+                        <!-- <td><div class="btn-group">
+                          <a class="btn btn-default" href="{{ url('edprof/'.$keluargas->id) }}">
                           <i class="fa fa-arrow-right"></i>
                          </a>
                          <div class="btn-group">
-                           <a class="btn btn-default" onclick="return confirm('Yakin Hapus?')" href="{{ url('unitkerja/delete/'.$unitkerja->id) }}">
+                           <a class="btn btn-default" onclick="return confirm('Yakin Hapus?')" href="{{ url('profilpegawai/delete/'.$keluargas->id) }}">
                           <i class="fa fa-trash-o"></i>
                           </a>
-                         </div> 
-                        </div>
-                      </tr>
-                      @endforeach
+                          <div class="btn-group">
+                          <a class="btn btn-default" href="{{ url('detprofil/'.$keluargas->id) }}">
+                          <i class="fa fa-caret-down"></i>
+                          </a>
+                         </div>
+                         </td> 
+                      </tr> -->
+                    @endforeach
                     </tbody>
                   </table>
                 </div><!-- /.box-body -->
-              </div><!-- /.box -->
-            </div><!-- /.col -->
-          </div><!-- /.row -->
-        </section><!-- /.content -->
-      <!-- /.Left col -->
-            <!-- right col (We are only adding the ID to make the widgets sortable)-->
-            <section class="col-lg-5 connectedSortable">
-
-              <!-- Map box -->
-              <!-- /. tools -->
-
-                    <!-- /.box-body-->
-                <!-- /.box -->
-
-              <!-- Calendar -->
-              <!-- /.box-header -->
-               <!-- /.col -->
-                  </div><!-- /.row -->
+              </div>
+           
+                  </div> --><!-- /.row -->
                 </div>
+
               </div><!-- /.box -->
 
             </section><!-- right col -->
@@ -251,7 +249,16 @@
         <!-- Tab panes -->
         <div class="tab-content">
           <!-- Home tab content -->
-          <div class="tab-pane" id="control-sidebar-home-tab"> 
+          <div class="tab-pane" id="control-sidebar-home-tab">
+            <h3 class="control-sidebar-heading">Recent Activity</h3>
+            <ul class="control-sidebar-menu">
+              <li>
+                <a href="javascript::;">
+                  <i class="menu-icon fa fa-birthday-cake bg-red"></i>
+                  <div class="menu-info">
+                    <h4 class="control-sidebar-subheading">Langdon's Birthday</h4>
+                    <p>Will be 23 on April 24th</p>
+                  </div>
                 </a>
               </li>
               <li>
@@ -408,33 +415,33 @@
       $.widget.bridge('uibutton', $.ui.button);
     </script>
     <!-- Bootstrap 3.3.5 -->
-    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="{{url('bootstrap/js/bootstrap.min.js')}}"></script>
     <!-- Morris.js charts -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
-    <script src="plugins/morris/morris.min.js"></script>
+    <script src="{{url('https://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js')}}"></script>
+    <script src="{{url('plugins/morris/morris.min.js')}}"></script>
     <!-- Sparkline -->
-    <script src="plugins/sparkline/jquery.sparkline.min.js"></script>
+    <script src="{{url('plugins/sparkline/jquery.sparkline.min.js')}}"></script>
     <!-- jvectormap -->
-    <script src="plugins/jvectormap/jquery-jvectormap-1.2.2.min.js"></script>
-    <script src="plugins/jvectormap/jquery-jvectormap-world-mill-en.js"></script>
+    <script src="{{url('plugins/jvectormap/jquery-jvectormap-1.2.2.min.js')}}"></script>
+    <script src="{{url('plugins/jvectormap/jquery-jvectormap-world-mill-en.js')}}"></script>
     <!-- jQuery Knob Chart -->
-    <script src="plugins/knob/jquery.knob.js"></script>
+    <script src="{{url('plugins/knob/jquery.knob.js')}}"></script>
     <!-- daterangepicker -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.2/moment.min.js"></script>
-    <script src="plugins/daterangepicker/daterangepicker.js"></script>
+    <script src="{{url('https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.2/moment.min.js')}}"></script>
+    <script src="{{url('plugins/daterangepicker/daterangepicker.js')}}"></script>
     <!-- datepicker -->
-    <script src="plugins/datepicker/bootstrap-datepicker.js"></script>
+    <script src="{{url('plugins/datepicker/bootstrap-datepicker.js')}}"></script>
     <!-- Bootstrap WYSIHTML5 -->
-    <script src="plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js"></script>
+    <script src="{{url('plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js')}}"></script>
     <!-- Slimscroll -->
-    <script src="plugins/slimScroll/jquery.slimscroll.min.js"></script>
+    <script src="{{url('plugins/slimScroll/jquery.slimscroll.min.js')}}"></script>
     <!-- FastClick -->
-    <script src="plugins/fastclick/fastclick.min.js"></script>
+    <script src="{{url('plugins/fastclick/fastclick.min.js')}}"></script>
     <!-- AdminLTE App -->
-    <script src="dist/js/app.min.js"></script>
+    <script src="{{url('dist/js/app.min.js')}}"></script>
     <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
-    <script src="dist/js/pages/dashboard.js"></script>
+    <script src="{{url('dist/js/pages/dashboard.js')}}"></script>
     <!-- AdminLTE for demo purposes -->
-    <script src="dist/js/demo.js"></script>
+    <script src="{{url('dist/js/demo.js')}}"></script>
   </body>
 </html>

@@ -7,28 +7,28 @@
     <!-- Tell the browser to be responsive to screen width -->
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <!-- Bootstrap 3.3.5 -->
-    <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{('/bootstrap/css/bootstrap.min.css')}}">
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="{{('https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css')}}">
     <!-- Ionicons -->
-    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" href="{{('https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css')}}">
     <!-- Theme style -->
-    <link rel="stylesheet" href="/dist/css/AdminLTE.min.css">
+    <link rel="stylesheet" href="{{('/dist/css/AdminLTE.min.css')}}">
     <!-- AdminLTE Skins. Choose a skin from the css/skins
          folder instead of downloading all of them to reduce the load. -->
-    <link rel="stylesheet" href="/dist/css/skins/_all-skins.min.css">
+    <link rel="stylesheet" href="{{('/dist/css/skins/_all-skins.min.css')}}">
     <!-- iCheck -->
-    <link rel="stylesheet" href="/plugins/iCheck/flat/blue.css">
+    <link rel="stylesheet" href="{{('/plugins/iCheck/flat/blue.css')}}">
     <!-- Morris chart -->
-    <link rel="stylesheet" href="/plugins/morris/morris.css">
+    <link rel="stylesheet" href="{{('/plugins/morris/morris.css')}}">
     <!-- jvectormap -->
-    <link rel="stylesheet" href="/plugins/jvectormap/jquery-jvectormap-1.2.2.css">
+    <link rel="stylesheet" href="{{('/plugins/jvectormap/jquery-jvectormap-1.2.2.css')}}">
     <!-- Date Picker -->
-    <link rel="stylesheet" href="/plugins/datepicker/datepicker3.css">
+    <link rel="stylesheet" href="{{('/plugins/datepicker/datepicker3.css')}}">
     <!-- Daterange picker -->
-    <link rel="stylesheet" href="/plugins/daterangepicker/daterangepicker-bs3.css">
+    <link rel="stylesheet" href="{{('/plugins/daterangepicker/daterangepicker-bs3.css')}}">
     <!-- bootstrap wysihtml5 - text editor -->
-    <link rel="stylesheet" href="/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css">
+    <link rel="stylesheet" href="{{('/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css')}}">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -189,7 +189,7 @@
         <td>
         <form action="{{ $data->id }}" method="post">
         <input type="hidden" name="_token" value="{{ csrf_token() }}">
-          <div class="input-control text full-size">          
+          <div class="input-control text full-size" style="padding-bottom:15px">          
           <input style="width:60%;" type="text" name="nik" value="{{ $data->nik }}">
           </a>
           </div>
@@ -198,7 +198,7 @@
       <tr>
         <td>Nama</td>
         <td>
-          <div class="input-control text full-size">
+          <div class="input-control text full-size" style="padding-bottom:15px">
             <input style="width:100%;" type="text" name="nama" value="{{ $data->nama }}">
           </div>
         </td>
@@ -206,13 +206,14 @@
        <tr>
       <td>Tanggal Lahir</td>
       <td>
+      <div class="input-control text full-size" style="padding-bottom:15px">
       <input class="form-control" data-inputmask="'alias': 'dd/mm/yyyy'" data-mask="" type="text" name="tanggal_lahir" value="{{ $data->tanggal_lahir }}">         
       </td>
       </tr>
        <tr>
         <td>Level</td>
         <td>
-          <div class="input-control select">
+          <div class="input-control select" style="padding-bottom:15px">
           <select style="width:100%" name="level">
             <option>-Pilih Level-</option>
             @foreach($level as $level)
@@ -224,7 +225,7 @@
       <tr>
         <td>Lokasi Kerja</td>
         <td>
-          <div class="input-control select">
+          <div class="input-control select" style="padding-bottom:15px">
           <select style="width:100%" name="lokasi_kerja">
             <option>-Pilih Lokasi Kerja-</option> 
             @foreach($lokasikerja as $lokasikerja)           
@@ -237,7 +238,7 @@
       <tr>
         <td>Unit Kerja</td>
         <td>
-          <div class="input-control select">
+          <div class="input-control select" style="padding-bottom:15px">
           <select style="width:100%" name="unit_kerja" value="{{ $data->unit_kerja }}">
             <option>Pilih Unit Kerja</option>
             @foreach($unitkerja as $unitkerja)
@@ -251,7 +252,7 @@
         <tr>
         <td>Jabatan</td>
         <td>
-          <div class="input-control select">
+          <div class="input-control select" style="padding-bottom:15px">
           <select style="width:100%" name="jabatan">
             <option>Pilih jabatan</option>
             @foreach($jabatan as $jabatan)
@@ -264,7 +265,7 @@
       <tr>
         <td>Status Aktif</td>
         <td>
-          <div class="input-contol text full-size">
+          <div class="input-contol text full-size" style="padding-bottom:15px">
           <select style="width:40%;" name="status_aktif" value="{{ $data->status_aktif }}">
             <option>Tidak Aktif</option>
             <option>Aktif</option>
@@ -275,7 +276,7 @@
       <tr>
         <td>Status Kawin</td>
         <td>
-          <div class="input-contol text full-size">
+          <div class="input-contol text full-size" style="padding-bottom:15px">
           <select style="width:40% ;" name="status_kawin" value="{{ $data->status_kawin }}">>
             <option>Belum Kawin</option>
             <option>Sudah Kawin</option>
@@ -286,7 +287,7 @@
       <tr>
         <td>Nomor SK</td>
         <td>
-          <div class="input-control text full-size">
+          <div class="input-control text full-size" style="padding-bottom:15px">
             <input style="width:100%;" type="text" name="nomor_sk" value="{{ $data->nomor_sk }}">
           </div>
         </td>
@@ -294,6 +295,7 @@
       <tr>
       <td>Tanggal Sk</td>
       <td>
+      <div class="input-control text full-size" style="padding-bottom:15px">
       <input class="form-control" data-inputmask="'alias': 'dd/mm/yyyy'" data-mask="" type="text" name="tanggal_sk" value="{{ $data->tanggal_sk }}">       
       </td>
       </tr>
@@ -306,7 +308,7 @@
      <tr>
         <td>Alamat</td>
         <td>
-          <div class="input-control text full-size">
+          <div class="input-control text full-size" style="padding-bottom:15px">
             <textarea style="width:100%" name="alamat">{{ $data->alamat }}</textarea>
           </div>
         </td>
@@ -315,7 +317,7 @@
       <tr>
         <td>RT/RW</td>
         <td>
-          <div class="input-control text full-size">
+          <div class="input-control text full-size" style="padding-bottom:15px">
             <input style="width:50%;" type="text" name="rt_rw" value="{{ $data->rt_rw }}">
           </div>
         </td>
@@ -323,7 +325,7 @@
       <tr>
         <td>Kode Pos</td>
         <td>
-          <div class="input-contol text full-size">
+          <div class="input-contol text full-size" style="padding-bottom:15px">
           <input type="text" style="width:100%" name="kode_pos" value="{{ $data->kode_pos }}">
           </div>
         </td>
@@ -331,7 +333,7 @@
       <tr>
         <td>Telephone Yang Bisa Dihubungi</td>
         <td>
-          <div class="input-contol text full-size">
+          <div class="input-contol text full-size" style="padding-bottom:15px">
           <input type="text" style="width:100%" name="tlp" value="{{ $data->tlp }}">
           </div>
         </td>

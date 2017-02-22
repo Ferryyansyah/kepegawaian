@@ -64,6 +64,12 @@ class WelcomeController extends Controller {
 		$profilpegawai = DB::select('select *from profilpegawai where id = ?',[$id]);
 		return view('profilpegawai',['profilpegawai'=>$profilpegawai]);
 	}
+	public function keluargalist(){
+		$keluargas = DB::table('keluargas')->get();
+         $data = DB::table('keluargas')->first();   
+		$profilpegawai = DB::select('select *from keluargas order by id desc');
+		return view('keluargalist',['keluargas'=>$keluargas]);
+	}
 	public function mutasi(){
 		return view('mutasi');
 	}

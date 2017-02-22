@@ -21,7 +21,7 @@ class CreateUsersTable extends Migration {
 			$table->string('username')->unique();
 			$table->string('password', 60);
 			$table->rememberToken();
-			$table->timestamps();
+			$table->timestamps(); 
 		});
 		$user = new User;
 		$user->name = 'feri';
