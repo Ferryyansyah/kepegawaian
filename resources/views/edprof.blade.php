@@ -128,6 +128,7 @@
                 <i class="fa fa-dashboard"></i> <span>Dashboard</span> 
               </a>
             </li>
+            <li>
               <a href="/profilpegawai">
                 <i class="fa fa-th"></i> <span>Profil Pegawai</span>
               </a>
