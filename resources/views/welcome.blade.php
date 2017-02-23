@@ -124,12 +124,9 @@
           <ul class="sidebar-menu">
             <li class="header">MAIN NAVIGATION</li>
             <li class="active treeview">
-              <a href="#">
-                <i class="fa fa-dashboard"></i> <span>Dashboard</span> <i class="fa fa-angle-left pull-right"></i>
+              <a href="/">
+                <i class="fa fa-dashboard"></i> <span>Dashboard</span> 
               </a>
-              <ul class="treeview-menu">
-                <li class="active"><a href="/"><i class="fa fa-circle-o"></i> Dashboard v1</a></li>
-              </ul>
             </li>
             <li>
               <a href="/profilpegawai">
@@ -243,18 +240,8 @@
             </div><!-- ./col -->
             <div class="col-lg-4 col-xs-6">
               <!-- small box -->
-              <div class="small-box bg-custom-1">
-                <div class="inner">
-                  <h3>0</h3>
-                  <p>Jumlah Hukuman Pegawai</p>
-                </div>
-                <div class="icon">
-                  <i class="ion "></i>
-                </div>
-                <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
-              </div>
-            </div><!-- ./col -->
-          </div><!-- /.row -->
+             <!-- ./col -->
+          <!-- /.row -->
           <!-- Main row -->
           <div class="row">
             <!-- Left col -->

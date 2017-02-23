@@ -123,14 +123,10 @@
           <!-- sidebar menu: : style can be found in sidebar.less -->
           <ul class="sidebar-menu">
             <li class="header">MAIN NAVIGATION</li>
-            <li class="active treeview">
-              <a href="#">
-                <i class="fa fa-dashboard"></i> <span>Dashboard</span> <i class="fa fa-angle-left pull-right"></i>
+           <li class="active treeview">
+              <a href="/">
+                <i class="fa fa-dashboard"></i> <span>Dashboard</span> 
               </a>
-
-              <ul class="treeview-menu">
-                <li class="active"><a href="/"><i class="fa fa-circle-o"></i> Dashboard v1</a></li>
-              </ul>
             </li>
             <li>
               <a href="/profilpegawai">
@@ -160,35 +156,31 @@
             <li class="treeview">
       </aside>
 
-      <!-- Content Wrapper. Contains page content -->
-       <div class="content-wrapper">
-    <!-- Content Header (Page header) -->    
+       <!-- Content Wrapper. Contains page content -->
+      <div class="content-wrapper">
+        <!-- Content Header (Page header) -->
+        <section class="content-header">
+          <h1 class="lead" style="font-size:45px">
+          Tambah Pegawai 
+          </h1 style="font-size:45px">
+          <hr>
+          <ol class="breadcrumb">
+            <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+            <li class="active">Dashboard</li>
+          </ol>
+        </section>
 
-    <!-- Main content -->
-    <section class="content">
-
-      <div class="row">
-        <div class="col-md-12">
-
-          <!-- Profile Image -->          
-          <!-- /.box -->
-
-          <!-- About Me Box -->
-          
-        <!-- /.col -->
-        <div class="col-md-12">
-          <div class="nav-tabs-custom">
-            <ul class="nav nav-tabs">
-              <li class="active"><a href="#activity" data-toggle="tab">Kepegawaian</a></li><!-- 
-              <li><a href="#timeline" data-toggle="tab">Keluarga</a></li> -->
-              <!-- <li><a href="#settings" data-toggle="tab">Pendidikan</a></li> -->
-            </ul>
-            <div class="tab-content">
-              <div class="active tab-pane" id="activity">
-                <!-- Post -->
-                <div class="content"> 
-    <table>
-       <h3>Detail Pegawai</h1>
+        <!-- Main content -->
+        <section class="content">
+          <div class="row">
+            <div class="col-xs-12">
+              <div class="box">
+                <div class="box-header" style="background:#0072C6">
+                  <h3 style="color:white;" class="box-title">Detail Pegawai</h3>
+                </div><!-- /.box-header -->
+                <div class="panel">
+  <div class="content"> 
+    <table style="width:55%">
       <tr>
         <td>NIK</td>
         <td>
@@ -368,145 +360,19 @@
     
   </div>
                 <!-- /.post -->
-              </div>
-              <!-- /.tab-pane -->
+            <!--   </div>
+              <!- /.tab-pane -->
               <div class="tab-pane" id="timeline">
                 <!-- The timeline -->
                 
                   <!-- timeline time label -->
-                   <div class="content"> 
-                   <form action="input/pegawai/keluarga" method="post">
-        <input type="hidden" name="_token" value="{{ csrf_token() }}">
-        <div class="input-control text full-size">   
-    <table>
-    <thead>
-       <h3>Pasangan Pegawai</h3>
-      <tr>
-        <td>Nama</td>
-        <td>
-          <div class="input-control text full-size">
-            <input style="width:100%;" type="text" name="nama_pasangan" id="nama_pasangan">
-          </div>
-          <br>
-        </td>
-      </tr>
-       <tr>
-      <td>Tanggal Lahir PASANGAN</td>
-      <td>
-      <input class="form-control" data-inputmask="'alias': 'dd/mm/yyyy'" data-mask="" type="text" name="tgl_lahir_pasangan" id="tgl_lahir_pasangan">
-      <br>         
-      </td>
-      </tr>
-    </thead>
-    <tbody>
-    <td><h3>Ayah Pegawai</h3></td>
-       <tr>
-        <td>Nama</td>
-        <td>
-          <div class="input-control text full-size">
-            <input style="width:100%;" type="text" name="nama_ayah" id="nama_ayah">
-          </div>
-          <br>
-        </td> 
-      <tr>
-      <td>Tanggal Lahir AYAH</td>
-      <td>
-      <input class="form-control" data-inputmask="'alias': 'dd/mm/yyyy'" data-mask="" type="text" name="tgl_lahir_ayah" id="tgl_lahir_ayah">
-      <br>         
-      </td>
-      </tr>
-    </thead>
-    <tbody>
-     <td><h3>Ibu Pegawai</h3></td>
-       <tr>
-        <td>Nama</td>
-        <td>
-          <div class="input-control text full-size">
-            <input style="width:100%;" type="text" name="nama_ibu" id="nama_ibu">
-          </div>
-          <br>
-        </td> 
-      <tr>
-      <td>Tanggal Lahir IBU</td>
-      <td>
-      <input class="form-control" data-inputmask="'alias': 'dd/mm/yyyy'" data-mask="" type="text" name="tgl_lahir_ibu" id="tgl_lahir_ibu">
-      <br>         
-      </td>
-      </tr> 
-      <tr>
-      <td>
-      <br>
-      </td>
-     </tr>
-      </table>
-      <td>
-      <div><td><a href="#"><button style="border:none;background:#82BA00;height:25px;width:100px;color:white" type="submit">SIMPAN</button></a></td></form>
-      <td><a href="/"><button style=";border:none;background:#82BA00;height:25px;width:100px;color:white" type="submit">KEMBALI</button></a></td>
-      </div>
-      </td>
-      </td>
-      </tr>
-      </tbody>
-    
-  </div>
-                  <!-- END timeline item -->
-                 
-                
-              </div>
-              <!-- /.tab-pane -->
+                  
 
-             <!--  <div class="tab-pane" id="settings">
-                <form class="form-horizontal">
-                  <div class="form-group">
-                    <label for="inputName" class="col-sm-2 control-label">Name</label>
 
-                    <div class="col-sm-10">
-                      <input type="email" class="form-control" id="inputName" placeholder="Name">
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <label for="inputEmail" class="col-sm-2 control-label">Email</label>
+<!-- ghghh- nnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn -->
 
-                    <div class="col-sm-10">
-                      <input type="email" class="form-control" id="inputEmail" placeholder="Email">
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <label for="inputName" class="col-sm-2 control-label">Name</label>
 
-                    <div class="col-sm-10">
-                      <input type="text" class="form-control" id="inputName" placeholder="Name">
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <label for="inputExperience" class="col-sm-2 control-label">Experience</label>
 
-                    <div class="col-sm-10">
-                      <textarea class="form-control" id="inputExperience" placeholder="Experience"></textarea>
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <label for="inputSkills" class="col-sm-2 control-label">Skills</label>
-
-                    <div class="col-sm-10">
-                      <input type="text" class="form-control" id="inputSkills" placeholder="Skills">
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <div class="col-sm-offset-2 col-sm-10">
-                      <div class="checkbox">
-                        <label>
-                          <input type="checkbox"> I agree to the <a href="#">terms and conditions</a>
-                        </label>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <div class="col-sm-offset-2 col-sm-10">
-                      <button type="submit" class="btn btn-danger">Submit</button>
-                    </div>
-                  </div>
-                </form> -->
               </div>
               <!-- /.tab-pane -->
             </div>

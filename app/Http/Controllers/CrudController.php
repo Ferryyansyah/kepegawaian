@@ -213,31 +213,7 @@ class CrudController extends Controller {
 
 	}
 
-	public function inputpegawaikeluarga(Request $request)
-	{
-		$nama_pasangan = \Input::get('nama_pasangan');
-		$tgl_lahir_pasangan = \Input::get('tgl_lahir_pasangan');
-		$nama_ayah = \Input::get('nama_ayah');
-		$tgl_lahir_ayah = \Input::get('tgl_lahir_ayah');
-		$nama_ibu = \Input::get('nama_ibu');
-		$tgl_lahir_ibu = \Input::get('tgl_lahir_ibu');
-
-		$data = array(
-			'nama_pasangan' => $nama_pasangan,
-			'tgl_lahir_pasangan' => $tgl_lahir_pasangan,
-			'nama_ayah' => $nama_ayah,
-			'tgl_lahir_ayah' => $tgl_lahir_ayah,
-			'nama_ibu' => $nama_ibu,
-			'tgl_lahir_ibu' => $tgl_lahir_ibu,
-		);
-
-		DB::table('keluargas')->insert($data);
-		
-		return \Redirect::to('/');	
-
-
-	}
-
+	
 	/**
 	 * Remove the specified resource from storage.
 	 *

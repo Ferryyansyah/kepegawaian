@@ -60,7 +60,7 @@ Route::post('inputlok','CrudController@show');
 Route::post('inputuni','CrudController@store');
 Route::post('inputlev','CrudController@stores');
 Route::post('inputpro','CrudController@storess');
-Route::post('input/pegawai/keluarga','CrudController@inputpegawaikeluarga');
+
 
 Route::post('edprof/{id}','CrudController@updateprof');
 Route::post('edjab/{id}','CrudController@updatejab');
